@@ -38,7 +38,7 @@ resource "aws_sns_topic_subscription" "email" {
   provider  = aws.us_east
   topic_arn = aws_sns_topic.cost_alerts.arn
   protocol  = "email"
-  endpoint  = var.alert_email
+  endpoint  = "davidartaud1@gmail.com"
 }
 
 
