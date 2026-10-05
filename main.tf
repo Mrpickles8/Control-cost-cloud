@@ -141,6 +141,7 @@ resource "aws_lambda_function" "weekly_reports" {
 resource "aws_cloudwatch_event_rule" "weekly" {
   name                = "cost-calculator-weekly-trigger"
   schedule_expression = "cron(0 8 ? * MON *)"
+  force_destroy       = true
 }
 
 resource "aws_cloudwatch_event_target" "weekly" {
