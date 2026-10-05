@@ -1,5 +1,5 @@
 resource "aws_iam_role" "lambda_role" {
-  name = "cost-calculator-lambda-role"
+  name = "cost-calculator-lambda-role-v2"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"

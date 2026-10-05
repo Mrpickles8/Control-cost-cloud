@@ -9,3 +9,10 @@ variable "alert_email" {
   type        = string
   sensitive   = true
 }
+
+
+variable "TF_API_TOKEN" {
+  description = "token terraform"
+  type        = string
+  sensitive   = true
+}

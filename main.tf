@@ -1,4 +1,15 @@
 terraform {
+  required_version = "1.16.5"
+  cloud {
+    organization = "dominionorg"
+
+    workspaces {
+      name = "terraform-aws-wrk02"
+    }
+  }
+}
+
+terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
