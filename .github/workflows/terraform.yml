@@ -14,7 +14,7 @@ env:
   AWS_REGION: "eu-west-1"
   TF_VAR_aws_region: "eu-west-1"
   TF_VAR_alert_threshold_eur: "100"
-  TF_VAR_alert_email: ${{ secrets.ALERT_EMAIL }}
+  TF_VAR_alert_email: ${{ secrets.alert_email }}
 
 jobs:
   terraform-plan:
