@@ -7,5 +7,5 @@ variable "alert_threshold_eur" {
 variable "alert_email" {
   description = "Email to receive the alerts"
   type        = string
-  sensitive   = true
+  default     = "davidartaud1@gmail.com"
 }
