@@ -51,7 +51,7 @@ jobs:
         if: github.event_name == 'pull_request'
         run: terraform plan -no-color
         env:
-          TF_VAR_alert_email: ${{ secrets.alert_mail }}
+          TF_VAR_alert_email: ${{ secrets.alert_email }}
 
   terraform-apply:
     name: Terraform Apply
@@ -81,7 +81,7 @@ jobs:
       - name: Terraform Apply
         run: terraform apply -auto-approve
         env:
-          TF_VAR_alert_email: ${{ secrets.alert_mail }}
+          TF_VAR_alert_email: ${{ secrets.alert_email }}
 
   terraform-destroy:
     name: Destroy Infrastructure

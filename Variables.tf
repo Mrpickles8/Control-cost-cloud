@@ -4,7 +4,7 @@ variable "alert_threshold_eur" {
   default     = 100
 }
 
-variable "alert_mail" {
+variable "alert_email" {
   description = "Email to receive the alerts"
   type        = string
   sensitive   = true
