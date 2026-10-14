@@ -110,3 +110,5 @@ jobs:
 
       - name: Terraform Destroy
         run: terraform destroy -auto-approve
+        env:
+          TF_VAR_alert_email: ${{ secrets.alert_email }}
