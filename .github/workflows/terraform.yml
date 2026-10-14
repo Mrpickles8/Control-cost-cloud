@@ -14,7 +14,7 @@ env:
   AWS_REGION: "eu-west-1"
   TF_VAR_aws_region: "eu-west-1"
   TF_VAR_alert_threshold_eur: "100"
-  TF_VAR_alert_email: ${{ secrets.alert_email }}
+  
 
 jobs:
   terraform-plan:
@@ -50,6 +50,8 @@ jobs:
       - name: Terraform Plan
         if: github.event_name == 'pull_request'
         run: terraform plan -no-color
+        env:
+          TF_VAR_alert_email: ${{ secrets.alert_mail }}
 
   terraform-apply:
     name: Terraform Apply
@@ -78,6 +80,8 @@ jobs:
 
       - name: Terraform Apply
         run: terraform apply -auto-approve
+        env:
+          TF_VAR_alert_email: ${{ secrets.alert_mail }}
 
   terraform-destroy:
     name: Destroy Infrastructure
