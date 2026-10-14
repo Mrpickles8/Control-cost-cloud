@@ -55,12 +55,12 @@ resource "aws_cloudwatch_metric_alarm" "billing_alarm" {
   namespace           = "AWS/Billing"
   period              = 86400 #24 heures
   statistic           = "Maximum"
-  threshold           = var.alert_threshold_eur
-  alarm_description   = "Alert if the charges exceeds 100 eur"
+  threshold           = var.alert_threshold_usd
+  alarm_description   = "Alert if the charges exceeds 100 usd"
   actions_enabled     = true
   alarm_actions       = [aws_sns_topic.cost_alerts.arn]
   dimensions = {
-    Currency = "EUR"
+    Currency = "USD"
   }
 }
 

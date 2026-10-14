@@ -1,4 +1,4 @@
-variable "alert_threshold_eur" {
+variable "alert_threshold_usd" {
   description = "Alert when monthly cost exceeds this amount (eur)"
   type        = number
   default     = 1
