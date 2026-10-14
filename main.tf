@@ -18,15 +18,19 @@ terraform {
   }
 }
 
-# Provider par default 
+# Provider par défaut
 provider "aws" {
-  region = "eu-west-1"
+  region     = var.aws_region_E
+  access_key = var.aws_access_key
+  secret_key = var.aws_secret_key
 }
 
 # Provider spécifique au Billing
 provider "aws" {
-  alias  = "us_east"
-  region = "us-east-1"
+  alias      = "us_east"
+  region     = var.aws_region_U
+  access_key = var.aws_access_key
+  secret_key = var.aws_secret_key
 }
 
 resource "aws_sns_topic" "cost_alerts" {

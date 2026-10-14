@@ -9,3 +9,26 @@ variable "alert_email" {
   type        = string
   sensitive   = true
 }
+
+variable "aws_region_E" {
+  description = "Email to receive the alerts"
+  type        = string
+  default     = "eu-west-1"
+}
+
+variable "aws_region_U" {
+  description = "Email to receive the alerts"
+  type        = string
+  default     = "us-east-1"
+}
+
+
+variable "aws_access_key" {
+  type      = string
+  sensitive = true
+}
+
+variable "aws_secret_key" {
+  type      = string
+  sensitive = true
+}
