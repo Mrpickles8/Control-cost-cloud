@@ -72,14 +72,14 @@ resource "aws_cloudwatch_dashboard" "cost" {
       {
         type = "metric"
         properties = {
-          title  = "AWS monthly estimated cost (eur)"
+          title  = "AWS monthly estimated cost (usd)"
           region = "us-east-1"
           metrics = [
             [
               "AWS/Billing",
               "EstimatedCharges",
               "Currency",
-              "EUR"
+              "USD"
             ]
           ]
           period = 86400
