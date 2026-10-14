@@ -1,7 +1,7 @@
 variable "alert_threshold_eur" {
   description = "Alert when monthly cost exceeds this amount (eur)"
   type        = number
-  default     = 100
+  default     = 1
 }
 
 variable "alert_email" {
