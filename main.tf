@@ -4,7 +4,7 @@ terraform {
     organization = "dominionorg"
 
     workspaces {
-      name = "terraform-aws-wrk02"
+      name = "cost-control-calculator"
     }
   }
 }
