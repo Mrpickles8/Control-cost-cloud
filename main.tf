@@ -66,6 +66,7 @@ resource "aws_cloudwatch_metric_alarm" "billing_alarm" {
 
 resource "aws_cloudwatch_dashboard" "cost" {
   dashboard_name = "cost-calculator-dashboard"
+  provider       = aws.us_east
 
   dashboard_body = jsonencode({
     widgets = [
