@@ -96,7 +96,7 @@ jobs:
 
       - name: Infracost Cost Estimation
         env:
-          api-key: ${{ secrets.INFRACOST_API_KEY }}
+          INFRACOST_API_KEY: ${{ secrets.INFRACOST_API_KEY }}
         run: |
           infracost breakdown --path . \
             --format table \
